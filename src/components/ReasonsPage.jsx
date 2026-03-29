@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // ✏️ Personalize these birthday wishes!
 const REASONS = [
-  "🌟 You're such a kind and wonderful person, and I feel lucky to share such a good bond with you. ❤️",
-  "💗 May your day be filled with love, laughter, and endless joy. 🌸",
-  "💕 Wishing you success, happiness, and everything your heart desires,and i feel so lucky to have you in my life ✨",
-  "☀️Stay the amazing girl you are—always spreading positivity around.Have the happiest year ahead! 🥳  (ellame unmai illa🙂‍↕️😂)"
-];
+    "🌟 You're such a kind and wonderful person, and I feel lucky to share such a good bond with you, i met the happiest version of myself when I'm with youu❤️",
+    "💗 May your day be filled with love, laughter, and endless joy, and you are the best part of my life ...i can't explain ...how much i love youu!!...Gokka makka love na love uuhh apdi oru Love uuhh😫🌸",
+    "💕 You're so irreplaceable in my life that I've never been able to find someone like you ✨,you can buy anything but you can't buy someone who's always excited about youu🙂‍↕️",
+    "☀️I really thought you'd be mine...But maybe some stories are meant to be felt not lived🙂",
+    "🐣Tow lines for youuu manda!! முன்னும் முன்னூறு ஆண்டுகள்,ஒன்றாய் நாம் வாழ்ந்த ஞாபகம்,ஏங்கி நான் பெற்ற என் வரம்,ஹையோ இப்போது யாரிடம் ----இனிய பிறந்தநாள் வாழ்த்துக்கள் sindoo💗"  
+  ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,10 +40,8 @@ export default function ReasonsPage({ onStorylane }) {
   };
 
   return (
-    // Note: The background is now shared from App.jsx, this container is transparent.
     <div className="min-h-screen flex flex-col items-center pt-24 pb-20 px-4 font-body relative z-[10]">
       
-      {/* Updated Header Color */}
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -51,7 +50,6 @@ export default function ReasonsPage({ onStorylane }) {
         Reasons We Value Sindhuu ❤️
       </motion.h1>
 
-      {/* The Glassmorphism Card Stack */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -63,7 +61,6 @@ export default function ReasonsPage({ onStorylane }) {
             <motion.div
               key={i}
               variants={cardVariants}
-              // Modeled after your Landing Page cards but slightly bigger/more prominent
               className="bg-white/5 border border-white/10 p-8 rounded-3xl shadow-glow text-white/80 text-center text-lg md:text-xl font-light leading-loose backdrop-blur-md"
             >
               {text}
@@ -72,7 +69,6 @@ export default function ReasonsPage({ onStorylane }) {
         </AnimatePresence>
       </motion.div>
 
-      {/* The Button (Matching Landing style) */}
       <div className="text-center">
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -83,7 +79,6 @@ export default function ReasonsPage({ onStorylane }) {
           {index === REASONS.length - 1 ? "Enter Our Storylane 💫" : "Next Reason... 💕"}
         </motion.button>
         
-        {/* Updated Counter Color */}
         <p className="mt-5 text-white/30 text-sm tracking-widest font-mono">
           Reason {index + 1} of {REASONS.length}
         </p>
